@@ -5,7 +5,7 @@ const pool = new Pool({
     password: "Welcome1",
     host: "localhost",
     port: 5432,
-    database: "slnst_database"
+    database: "nexen_database"
 });
 
 // const pool = new Pool({
