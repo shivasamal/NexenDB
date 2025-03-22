@@ -5,15 +5,11 @@ const pool = new Pool({
     password: "Welcome1",
     host: "localhost",
     port: 5432,
-    database: "nexen_database"
+    database: "nexen"
 });
 
-// const pool = new Pool({
-//      user: "arkhyate_admin",
-//      password: "xORrTg{4S^[5",
-//      host: "50.116.88.219",
-//      port: 5432,
-//     database: "arkhyate_slnst"
-// });
+pool.connect()
+    .then(() => console.log("✅ Database connected successfully"))
+    .catch((err) => console.error("❌ Database connection error:", err));
 
 module.exports = pool;

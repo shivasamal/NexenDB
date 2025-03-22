@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const logger = require('./logger');
 const folderPath = './uploads/';
 const fs = require('fs');
+const pool = require('./DB/index');
 
 app.use(express.json());
 app.use(cors());
@@ -62,9 +63,9 @@ const swaggerOptions = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'SLNST API',
+            title: 'NEXEN API',
             version: '1.0.0',
-            description: 'SLNST Management Api',
+            description: 'NEXEN Management Api',
         },
         // servers: [{
         //     url: "http://localhost:5000"
